@@ -58,6 +58,12 @@ function signup() {
          $er_mdp = "passwords do not match";
     }
     if($valid){
+      //Test de création clé de confirmation
+     /*$longueurKey = 15;
+      $key = "";
+      for($i=1;$i<$longueurKey;$i++){ 
+        $key .= mt_rand(0,9);
+      }*/
       $password = hash('sha256', $password);
       $new_user = new User();
       $new_user->setEmail($mail);

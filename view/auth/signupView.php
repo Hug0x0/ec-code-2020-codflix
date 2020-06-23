@@ -7,7 +7,6 @@
         <div class="auth-container">
           <h2><span>Cod</span>'Flix</h2>
           <h3>Inscription</h3>
-
           <form method="post" action="index.php?action=signup" class="custom-form">
 
             <div class="form-group">
@@ -33,8 +32,13 @@
                 <div class="col-md-6">
                   <a href="index.php?action=login" class="btn btn-block bg-blue">Connexion</a>
                 </div>
+                </div>
+                <!--<div class="col-md-6">
+                  <a href="index.php?action=confirmation" class="btn btn-block bg-blue">Confirmez email</a>
+                </div>-->
               </div>
             </div>
+            
 
             <span class="error-msg">
               <?= isset( $error_msg ) ? $error_msg : null; ?>
