@@ -7,10 +7,13 @@
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
+SET SQL_MODE
+= "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT
+= 0;
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone
+= "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -22,6 +25,10 @@ SET time_zone = "+00:00";
 -- Database: `codflix`
 --
 
+CREATE DATABASE codflix;
+USE codflix;
+
+
 -- --------------------------------------------------------
 
 --
@@ -29,11 +36,16 @@ SET time_zone = "+00:00";
 --
 
 DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(80) NOT NULL,
-  `password` varchar(80) NOT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE
+IF NOT EXISTS `user` (
+  `id` int
+(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar
+(80) NOT NULL,
+  `password` varchar
+(80) NOT NULL,
+  PRIMARY KEY
+(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 COMMIT;
 
