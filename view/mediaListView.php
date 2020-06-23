@@ -1,11 +1,12 @@
-<?php ob_start(); ?>
+<?php ob_start(); 
+?>
 
 <div class="row">
     <div class="col-md-4 offset-md-8">
         <form method="get">
             <div class="form-group has-btn">
                 <input type="search" id="search" name="title" value="<?= $search; ?>" class="form-control"
-                       placeholder="Rechercher un film ou une série">
+                       placeholder="Rechercher">
 
                 <button type="submit" class="btn btn-block bg-red">Valider</button>
             </div>
@@ -15,7 +16,7 @@
 
 <div class="media-list">
     <?php foreach( $medias as $media ): ?>
-        <a class="item" href="index.php?media=<?= $media['id']; ?>">
+        <a class="item" href="index.php?action=detail&media=<?=$media['id'];?>">
             <div class="video">
                 <div>
                     <iframe allowfullscreen="" frameborder="0"
@@ -23,11 +24,13 @@
                 </div>
             </div>
             <div class="title"><?= $media['title']; ?></div>
+            <div class="title"><?= $media['release_date']; ?></div>
         </a>
     <?php endforeach; ?>
 </div>
 
 
 <?php $content = ob_get_clean(); ?>
+
 
 <?php require('dashboard.php'); ?>

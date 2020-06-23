@@ -18,6 +18,9 @@
 .bg-white {
   background-color: #fff;
 }
+.bg-pink {
+  background-color: rgb(231, 54, 222);
+}
 
 .bg-red {
   background-color: var(--color-red) !important;
