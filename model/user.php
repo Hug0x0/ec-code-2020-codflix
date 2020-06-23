@@ -57,7 +57,7 @@ class User {
   }
 
   public function getPassword() {
-    return $this->password;
+    return hash('sha256', $post['password']);
   }
 
   /***********************************
