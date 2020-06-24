@@ -7,7 +7,6 @@ require_once( 'controller/mediaController.php' );
 require_once( 'controller/contactController.php' );
 require_once( 'controller/mediaDetailController.php' );
 require_once( 'controller/profilController.php' );
-
 require_once( 'controller/contactControllerDe.php' );
 
 
@@ -60,6 +59,12 @@ if ( isset( $_GET['action'] ) ):
     case 'profil':
 
       profilController();
+
+    break;
+
+    case 'modifpassword':
+
+      modifPassword();
 
     break;
 
