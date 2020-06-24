@@ -11,6 +11,7 @@ require_once( 'controller/contactControllerDe.php' );
 
 
 
+
 /**************************
 * ----- HANDLE ACTION -----
 ***************************/
@@ -27,7 +28,7 @@ if ( isset( $_GET['action'] ) ):
     break;
 
     case 'signup':
-      if ( !empty( $_POST ) ) signup( $_POST );
+      if ( !empty( $_POST ) ) signup( );
       else signupPage();
 
     break;

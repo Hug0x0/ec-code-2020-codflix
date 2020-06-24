@@ -27,24 +27,24 @@ function loginPage() {
 
 function login( $post ) {
 
-  $data           = new stdClass();
-  $data->email    = $post['email'];
+  $data = new stdClass();
+  $data->email = $post['email'];
   $data->password = hash('sha256',$post['password']); 
 
-  $user           = new User( $data );
-  $userData       = $user->getUserByEmail();
+  $user = new User( $data );
+  $userData = $user->getUserByEmail();
 
-  $error_msg      = "Email ou mot de passe incorrect";
+  $error_msg = "Email ou mot de passe incorrect";
 
-  if( $userData && sizeof( $userData ) != 0 ):
-    if( $user->getPassword() == $userData['password'] ):
-
-      // Set session
-      $_SESSION['user_id'] = $userData['id'];
+  if( $userData && sizeof( $userData ) != 0 ){ 
+    if( $user->getPassword() == $userData['password'] ){ 
+$_SESSION['user_id'] = $userData['id'];
 
       header( 'location: index.php ');
-    endif;
-  endif;
+    } else { 
+      $error_msg = "Email ou mot de passe incorrect";
+    }
+  }
 
   require('view/auth/loginView.php');
 }

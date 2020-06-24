@@ -58,7 +58,7 @@ class User {
   }
 
   public function getPassword() {
-    return hash('sha256', $post['password']);
+    return $this->password;
   }
 
   /***********************************
@@ -68,10 +68,10 @@ class User {
   public function createUser() {
 
     // Open database connection
-    $db   = init_db();
+    $db = init_db();
 
     // Check if email already exist
-    $req  = $db->prepare( "SELECT * FROM user WHERE email = ?" );
+    $req = $db->prepare( "SELECT * FROM user WHERE email = ?" );
     $req->execute( array( $this->getEmail() ) );
 
     if( $req->rowCount() > 0 ) throw new Exception( "Email ou mot de passe incorrect" );
@@ -82,7 +82,7 @@ class User {
     $req  = $db->prepare( "INSERT INTO user ( email, password ) VALUES ( :email, :password)" );
     $req->execute( array(
       'email'     => $this->getEmail(),
-      'password'  => $this->getPassword(),
+      'password'  => $this->getPassword()
     ));
 
     // Close databse connection
