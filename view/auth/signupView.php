@@ -38,8 +38,6 @@
                 </div>-->
               </div>
             </div>
-            
-
             <span class="error-msg">
               <?= isset( $error_msg ) ? $error_msg : null; ?>
             </span>
