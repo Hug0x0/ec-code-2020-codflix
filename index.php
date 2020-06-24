@@ -8,6 +8,9 @@ require_once( 'controller/contactController.php' );
 require_once( 'controller/mediaDetailController.php' );
 require_once( 'controller/profilController.php' );
 
+require_once( 'controller/contactControllerDe.php' );
+
+
 
 /**************************
 * ----- HANDLE ACTION -----
@@ -39,6 +42,12 @@ if ( isset( $_GET['action'] ) ):
     case 'contact':
 
       contact();
+
+    break;
+
+    case 'contactde':
+
+      contactde();
 
     break;
 
