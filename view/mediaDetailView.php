@@ -26,9 +26,10 @@
             <span id="media_genre" class="row">Genre: <?= $reqGenre['name']?> Type: <?= $req['type']?></span>
             <p class="row">Date de sortie: <?= $req['release_date']?></p>
             <p class="row">Durée: <?= $req['durée']?></p>
+            <span class="row">Summary: <?= $req['summary']?></span>
+            <p class="row">Réalisator: <?= $req['director']?></p>
+            <p></p>
         </div>
-        <span><?= $req['summary']?></span>
-        <p></p>
     </div>
     <div class="row video mt-4">
         <iframe width="560" height="315" 
