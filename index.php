@@ -6,6 +6,8 @@ require_once( 'controller/signupController.php' );
 require_once( 'controller/mediaController.php' );
 require_once( 'controller/contactController.php' );
 require_once( 'controller/mediaDetailController.php' );
+require_once( 'controller/profilController.php' );
+
 
 /**************************
 * ----- HANDLE ACTION -----
@@ -43,6 +45,12 @@ if ( isset( $_GET['action'] ) ):
     case 'detail':
 
       detailController();
+
+    break;
+    
+    case 'profil':
+
+      profilController();
 
     break;
 
