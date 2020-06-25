@@ -44,11 +44,7 @@
           </form>
         </div>
       </div>
-      <div class="col-md-6 full-height">
-        <div class="auth-container">
-          <h1>Bienvenue sur Cod'Flix !</h1>
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>

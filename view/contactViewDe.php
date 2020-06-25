@@ -30,11 +30,8 @@
                 </div>
             <div class="form-group">
               <div class="row">
-              <div class="justify-content-center d-flex">
-                  <button type="submit" class="btn bg-red">Send</button>
-                </div>
-              <div class="col-md-6">
-              </div>
+              
+              
           </div>
 
             <span class="error-msg">

@@ -26,7 +26,7 @@
             <span id="media_genre" class="row">Genre: <?= $reqGenre['name']?> Type: <?= $req['type']?></span>
             <p class="row">Date de sortie: <?= $req['release_date']?></p>
             <p class="row">Durée: <?= $req['durée']?></p>
-            <span class="row">Summary: <?= $req['summary']?></span>
+            <span class="row">Synopsis et détails: <?= $req['summary']?></span>
             <p class="row">Réalisator: <?= $req['director']?></p>
             <p></p>
         </div>
