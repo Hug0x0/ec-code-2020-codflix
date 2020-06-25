@@ -6,17 +6,17 @@
       <div class="col-md-6 full-height bg-white">
         <div class="auth-container">
           <h2><span>Cod</span>'Flix</h2>
-          <h3>Connexion</h3>
+          <h3>Sign in</h3>
 
           <form method="post" action="index.php?action=login" class="custom-form">
 
             <div class="form-group">
-              <label for="email">Adresse email</label>
+              <label for="email">E-mail adress</label>
               <input type="email" name="email" value="" id="email" class="form-control" />
             </div>
 
             <div class="form-group">
-              <label for="password">Mot de passe</label>
+              <label for="password">password</label>
               <input type="password" name="password" id="password" class="form-control" />
             </div>
 
@@ -26,7 +26,7 @@
                   <input type="submit" name="Valider" class="btn btn-block bg-red" />
                 </div>
                 <div class="col-md-6">
-                  <a href="index.php?action=signup" class="btn btn-block bg-blue">Inscription</a>
+                  <a href="index.php?action=signup" class="btn btn-block bg-blue">Registration</a>
                 </div>
               </div>
             </div>
@@ -39,7 +39,7 @@
       </div>
       <div class="col-md-6 full-height">
         <div class="auth-container">
-          <h1>Heureux de vous revoir !</h1>
+          <h1>Happy to see you again !</h1>
         </div>
       </div>
     </div>

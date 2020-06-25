@@ -24,11 +24,11 @@
 <div class="col mt-5">
     <div class="row mt-4">
         <div class="col mt-2">
-            <span id="media_genre" class="row">Genre: <?= $reqGenre['name']?> Type: <?= $req['type']?></span>
-            <p class="row">Date de sortie: <?= $req['release_date']?></p>
-            <p class="row">Durée: <?= $req['durée']?></p>
-            <span class="row">Synopsis et détails: <?= $req['summary']?></span>
-            <p class="row">Réalisator: <?= $req['director']?></p>
+            <span id="media_genre" class="row">Kind: <?= $reqGenre['name']?> Type: <?= $req['type']?></span>
+            <p class="row">Release date: <?= $req['release_date']?></p>
+            <p class="row">Duration: <?= $req['durée']?></p>
+            <span class="row">Synopsis and details: <?= $req['summary']?></span>
+            <p class="row">Director: <?= $req['director']?></p>
             <p></p>
         </div>
     </div>

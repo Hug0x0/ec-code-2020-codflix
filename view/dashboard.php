@@ -15,19 +15,17 @@
   <body>
     <div class="wrapper d-flex align-items-stretch">
       <nav id="sidebar">
-        <h2 class="title">Bienvenue</h2>
+        <h2 class="title">Welcome</h2>
         <div class="sidebar-menu">
           <ul>
-            <li class="active"><a href="index.php">Médias</a></li>
-            <li><a href="index.php?action=profil">💩 Mon profil 💩</a></li>
-            <li><a href="index.php?action=choice">Choix par categorie</a></li>
-            <li><a href="index.php?action=logout">Me déconnecter</a></li>
-            <li><a href="index.php?action=contactde">Nous contacter</a></li>
+            <li class="active"><a href="index.php">Media</a></li>
+            <li><a href="index.php?action=profil">My profile</a></li>
+            <li><a href="index.php?action=choice">Choice by category</a></li>
+            <li><a href="index.php?action=logout">Disconnect</a></li>
+            <li><a href="index.php?action=contactde">Contact us</a></li>
           </ul>
         </div>
       </nav>
-
-        <!-- Page Content  -->
       <div id="content">
         <div class="header">
           <h2 class="title">Cod<span>'Flix</span></h2>

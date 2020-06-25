@@ -6,21 +6,21 @@
       <div class="col-md-6 full-height bg-white">
         <div class="auth-container">
           <h2><span>Cod</span>'Flix</h2>
-          <h3>Inscription</h3>
+          <h3>Registration</h3>
           <form method="post" action="index.php?action=signup" class="custom-form">
 
             <div class="form-group">
-              <label for="email">Adresse email</label>
+              <label for="email">E-mail adress</label>
               <input type="email" name="email" value="" id="email" class="form-control" />
             </div>
 
             <div class="form-group">
-              <label for="password">Mot de passe</label>
+              <label for="password">Password</label>
               <input type="password" name="password" id="password" class="form-control" />
             </div>
 
             <div class="form-group">
-              <label for="password_confirm">Confirmez votre mot de passe</label>
+              <label for="password_confirm">Confirm your password</label>
               <input type="password" name="password_confirm" id="password_confirm" class="form-control" />
             </div>
 

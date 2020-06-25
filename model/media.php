@@ -1,7 +1,7 @@
 <?php
 
 require_once( 'database.php' );
-
+//Class Media
 class Media {
 
   protected $id;
@@ -90,7 +90,6 @@ class Media {
 
   public static function filterMedias( $search ) {
 
-    // Open database connection
     $db = init_db();
 
     if(empty($search)){
@@ -103,7 +102,6 @@ class Media {
       $req = $db->prepare('SELECT * FROM media WHERE title LIKE "%'.$search.'%"');
       $req->execute();
     }
-    // Close database connection
     $db = null;
 
     return $req->fetchAll();
@@ -137,7 +135,6 @@ class Media {
   
   public static function filterGenre( $search ) {
 
-    // Open database connection
     $db = init_db();
 
     if(empty($search)){
@@ -150,7 +147,6 @@ class Media {
       $req = $db->prepare('SELECT * FROM genre WHERE name LIKE "%'.$search.'%"');
       $req->execute();
     }
-    // Close database connection
     $db = null;
 
     return $req->fetchAll();

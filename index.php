@@ -10,9 +10,6 @@ require_once( 'controller/profilController.php' );
 require_once( 'controller/contactControllerDe.php' );
 require_once( 'controller/choiceController.php' );
 
-
-
-
 /**************************
 * ----- HANDLE ACTION -----
 ***************************/
@@ -60,7 +57,7 @@ if ( isset( $_GET['action'] ) ):
     
     case 'profil':
 
-      profilController();
+      profil();
 
     break;
     // case 'profile':

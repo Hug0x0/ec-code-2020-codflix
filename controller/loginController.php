@@ -4,10 +4,6 @@ session_start();
 
 require_once( 'model/user.php' );
 
-/****************************
-* ----- LOAD LOGIN PAGE -----
-****************************/
-
 function loginPage() {
 
   $user     = new stdClass();
@@ -20,10 +16,6 @@ function loginPage() {
   endif;
 
 }
-
-/***************************
-* ----- LOGIN FUNCTION -----
-***************************/
 
 function login( $post ) {
 
@@ -52,10 +44,6 @@ $_SESSION['user_id'] = $userData['id'];
 
   require('view/auth/loginView.php');
 }
-
-/****************************
-* ----- LOGOUT FUNCTION -----
-****************************/
 
 function logout() {
   $_SESSION = array();

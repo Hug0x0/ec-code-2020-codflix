@@ -1,7 +1,7 @@
 <?php
 
 require_once( 'database.php' );
-
+//Class Genre
 class Genre {
 
   protected $id;

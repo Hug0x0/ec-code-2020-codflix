@@ -13,10 +13,8 @@
     <div class="col-md-4 offset-md-8">
         <form method="get">
             <div class="form-group has-btn">
-                <input type="search" id="search" name="title" value="<?= $search; ?>" class="form-control"
-                       placeholder="Rechercher">
-
-                <button type="submit" class="btn btn-block bg-red">Valider</button>
+                <input type="search" id="search" name="title" value="<?= $search; ?>" class="form-control" placeholder="Rechercher">
+                <button type="submit" class="btn btn-block bg-red">Submit</button>
             </div>
         </form>
     </div>

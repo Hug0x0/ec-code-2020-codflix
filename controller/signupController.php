@@ -2,10 +2,6 @@
 
 require_once( 'model/user.php' );
 
-/****************************
-* ----- LOAD SIGNUP PAGE -----
-****************************/
-
 function signupPage() {
 
   $user     = new stdClass();
@@ -19,25 +15,19 @@ function signupPage() {
 
 }
 
-/***************************
-* ----- SIGNUP FUNCTION -----
-***************************/
 if(isset($_POST['Valider'])){
   signup();
 }
 function signup() {
 
-  // On verifie d'abord qu'on reçoit des données via le formulaire 
   if(!empty($_POST)){
     extract($_POST);
     $valid = true;
 
-  // value to recover in form
     if(isset($_POST['Valider'])){
       $mail = htmlentities(strtolower($email));
       $password = htmlentities(trim($password));
       $conf_password = htmlentities(trim($password_confirm));
-      // Email verification
       if(empty($mail)){
         $valid = false;
         $er_mail = "Mail cannot be empty";
@@ -47,7 +37,7 @@ function signup() {
         $er_mail = "Invalid email";
       }
     }
-    // Password verification
+    
     if(empty($password)) {
       $valid = false;
       $er_mdp = "Password cannot be empty";

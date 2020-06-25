@@ -131,7 +131,7 @@ class User {
   * ------- DELETE USER -------
   ****************************************/
 
-  public function deleteUser($user_id ) {
+  public function deleteUser() {
 
     
     // Open database connection
@@ -144,6 +144,37 @@ class User {
     $db   = null;
 
     return $req->fetch();
+  }
+  /***************************************
+* ------- UPDATE USER PASSWORD ------
+****************************************/
+
+public function updateUserMail() {
+
+  $db   = init_db();
+
+  $req  = $db->prepare( "UPDATE user SET email = :email WHERE id = :id;" );
+  $req->execute( array(
+    'email' => $this->getEmail(),
+    'id' => $this->getId()
+  ));
+
+  // Close databse connection
+  $db   = null;
+}
+
+  public function updateUserPassword() {
+
+    $db   = init_db();
+
+    $req  = $db->prepare( "UPDATE user SET password = :password WHERE id = :id;" );
+    $req->execute( array(
+      'password' => hash('sha256', $this->getPassword()),
+      'id' => $this->getId()
+    ));
+
+    // Close databse connection
+    $db   = null;
   }
 
   /***************************************
