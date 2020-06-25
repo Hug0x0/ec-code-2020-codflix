@@ -113,7 +113,7 @@ class User {
 * ------- UPDATE USER EMAIL ------
 ****************************************/
 
-  public function updateEmailUserByID($id ) {
+  public function updateEmailUserByID($user_id, $new_mail ) {
 
     // Open database connection
     $db   = init_db();
@@ -131,13 +131,14 @@ class User {
   * ------- DELETE USER -------
   ****************************************/
 
-  public function deleteUser($id ) {
+  public function deleteUser($user_id ) {
 
+    
     // Open database connection
     $db   = init_db();
 
-    $req  = $db->prepare( "SELECT * FROM user WHERE email = ?" );
-    $req->execute( array( $this->getEmail() ));
+    $req  = $db->prepare( "DELETE FROM user WHERE id = ?" );
+    $req->execute(array( $user_id));
 
     // Close databse connection
     $db   = null;

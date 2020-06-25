@@ -47,7 +47,7 @@
                   <a href="index.php?redicrect=signup" class="btn btn-block bg-red">Suppression du compte</a>
                 </div>
                 <div class="col-md-6">
-                  <input type="submit" name="Valider" class="btn btn-block bg-red" />
+                  <input type="submit" name="Modifier le mot de passe" class="btn btn-block bg-red" />
                 </div>
               </div>
             </div>
