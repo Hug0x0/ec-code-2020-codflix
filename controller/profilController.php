@@ -2,7 +2,7 @@
 function profilController(){ 
     require('view/profilView.php');
 }
-function modifController(){ 
-    
+function modifController($user){ 
+   
 }
 ?>

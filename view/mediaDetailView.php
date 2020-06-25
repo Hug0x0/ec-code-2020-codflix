@@ -3,10 +3,10 @@
 <?php
 
     $id_media = $_GET['media'];
-    echo "id media = " . $id_media;
+    //echo "id media = " . $id_media;
     $req = Media::detailMedia($id_media);
     $reqGenre = Media::detailMediaGenre($id_media);
-    var_dump($reqGenre);
+    //var_dump($reqGenre);
 ?>
 
 <div class="row">
