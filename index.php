@@ -58,16 +58,16 @@ if ( isset( $_GET['action'] ) ):
 
     break;
     
-    // case 'profil':
+    case 'profil':
 
-    //   profilController();
+      profilController();
 
-    // break;
-    case 'profile':
-
-      updateAccount($_POST );
-    
     break;
+    // case 'profile':
+
+    //   updateAccount($_POST );
+    
+    // break;
 
     case 'choice':
 

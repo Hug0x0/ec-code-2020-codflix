@@ -30,10 +30,14 @@ function login( $post ) {
   $data = new stdClass();
   $data->email = $post['email'];
   $data->password = hash('sha256',$post['password']); 
+  $user = null;
+  $userData = null;
 
-  $user = new User( $data );
-  $userData = $user->getUserByEmail();
-
+  if (preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i", $post['email']))
+  {
+    $user = new User( $data );
+    $userData     = $user->getUserByEmail();
+  }
   $error_msg = "Email ou mot de passe incorrect";
 
   if( $userData && sizeof( $userData ) != 0 ){ 
