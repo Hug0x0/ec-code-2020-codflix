@@ -134,5 +134,27 @@ class Media {
 
     return $req->fetch();
   }
+  
+  public static function filterGenre( $search ) {
+
+    // Open database connection
+    $db = init_db();
+
+    if(empty($search)){
+      $req = $db->prepare( "SELECT * FROM genre" );
+      $req->execute();
+      $db   = null;
+
+      return $req->fetchALL();
+    } else { 
+      $req = $db->prepare('SELECT * FROM genre WHERE name LIKE "%'.$search.'%"');
+      $req->execute();
+    }
+    // Close database connection
+    $db = null;
+
+    return $req->fetchAll();
+
+  }
 
 }
